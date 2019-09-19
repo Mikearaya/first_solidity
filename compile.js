@@ -23,7 +23,9 @@ let jsonContractSource = JSON.stringify({
     },
 });
 
+const ex = JSON.parse(solc.compile(jsonContractSource)).contracts['Task']['Inbox'];
 
-module.exports = JSON.parse(solc.compile(jsonContractSource)).contracts['Task']['Inbox'];
+
+module.exports = ex;
 
 
